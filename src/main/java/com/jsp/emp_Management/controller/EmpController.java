@@ -1,8 +1,11 @@
 package com.jsp.emp_Management.controller;
 
 import com.jsp.emp_Management.entity.Employee;
+import com.jsp.emp_Management.entity.ResponseStructure;
 import com.jsp.emp_Management.service.EmpService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,24 +17,30 @@ public class EmpController {
     private final EmpService empService;
 
     @PutMapping("/update")
-    public Employee updateEmp(@RequestBody Employee employee) {
-        return empService.updateEmp(employee);
+    public ResponseEntity<Employee> updateEmp(@RequestBody Employee employee) {
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body(empService.updateEmp(employee));
     }
 
     @PostMapping("/signUp")
-    public Employee signUp(@RequestBody Employee employee) {
-        return empService.signUp(employee);
+    public ResponseEntity<Employee> signUp(@RequestBody Employee employee) {
+        Employee e = empService.signUp(employee);
+        return ResponseEntity.status(HttpStatus.CREATED).body(e);
     }
 
     @DeleteMapping("/delete/{id}")
-    public Employee deleteEmp(@PathVariable long id) {
-        return empService.deleteEmp(id);
-
+    public ResponseEntity<Employee> deleteEmp(@PathVariable long id) {
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body(empService.deleteEmp(id));
     }
 
     @GetMapping("/fetch/{id}")
-    public Employee fetchEmp(@PathVariable long id) {
-        return empService.fetchEmp(id);
+    public ResponseEntity<ResponseStructure<Employee>> fetchEmp(@PathVariable long id) {
+
+        ResponseStructure<Employee> response = new ResponseStructure<>();
+        response.setMessage("Employee Found:");
+        response.setStatusCode(HttpStatus.FOUND.value());
+        response.setData(empService.fetchEmp(id));
+//        return new  ResponseEntity<>(empService.fetchEmp(id), HttpStatus.FOUND); / Traditional approach
+        return ResponseEntity.status(HttpStatus.FOUND).body(response);
 
     }
 
@@ -45,7 +54,7 @@ public class EmpController {
         return empService.updateEmpEmail(id,email);
     }
 
-    @PostMapping("/signIn")
+    @GetMapping("/signIn")
     public Employee signIn(@RequestHeader String email, @RequestHeader String password) {
         return empService.signIn(email,password);
     }

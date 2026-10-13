@@ -6,7 +6,8 @@ import com.jsp.emp_Management.exception.EmployeeNotFound;
 import com.jsp.emp_Management.exception.PasswordIncorrectException;
 import com.jsp.emp_Management.repository.EmpRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,36 +19,25 @@ public class EmpService {
     private final EmpRepository repo;
 
     public Employee signUp(Employee employee) {
-        repo.save(employee);
-        System.out.println("signUp Successful..");
-        return employee;
+        if(repo.existsByEmail(employee.getEmail()))
+            throw new EmployeeNotFound("Employee with email " + employee.getEmail() + " already exists");
+
+        return repo.save(employee);
     }
 
     public Employee updateEmp(Employee employee) {
-        Optional<Employee> emp = repo.findById(employee.getId());
-        if(emp.isPresent()){
-            repo.save(employee);
-            System.out.println("Update Successful..");
-        }else
-            throw new EmployeeNotFound("Employee Not Found");
-
-        return employee;
+            fetchEmp(employee.getId());
+            return repo.save(employee);
     }
 
     public Employee deleteEmp(long id) {
-        Employee e =repo.findById(id).orElseThrow(()-> new EmployeeNotFound("Employee Not Found"));
+        Employee e=fetchEmp(id);
         repo.delete(e);
         return e;
     }
 
     public Employee fetchEmp(long id) {
-        Optional<Employee> emp = repo.findById(id);
-        if(emp.isPresent()){
-            return emp.get();
-        }else {
-            throw new EmployeeNotFound("Employee Not Found");
-        }
-
+        return repo.findById(id).orElseThrow(()->new EmployeeNotFound("Employee Not Found in Database"));
     }
 
     public List<Employee> fetchAll() {
@@ -56,30 +46,26 @@ public class EmpService {
     }
 
     public Employee updateEmpEmail(long id, String email) {
-
-        Employee e = repo.findById(id).orElseThrow(()-> new EmployeeNotFound("Employe Doesn't Exist"));
+        Employee e = fetchEmp(id);
         e.setEmail(email);
-        repo.save(e);
-        return e;
-
-
+        return repo.save(e);
 
 //        Optional<Employee> e = repo.findById(id);
 //        if(e.isPresent()){
 //            Employee emp = e.get();
 //            emp.setEmail(email);
 //            repo.save(emp);
-//            System.out.println("Update Successful..");
+//            System.out.println("Update Successful.");
 //            return e.get();
 //        }else
 //            throw new EmployeeNotFound("Employee Not Found");
     }
 
     public Employee signIn(String email, String password) {
-        Employee e = repo.findByEmailAndPassword(email,password).orElseThrow(()-> new EmailNotFound("Email Doesn't Exist"));
+        Employee e = repo.findByEmail(email).orElseThrow(()-> new EmailNotFound("Email hin bhul gye??\n Kuch ni ho sakta tumhara"));
         if(e.getPassword().equals(password)){
             return e;
         }else
-            throw new PasswordIncorrectException("Wrong Password");
+            throw new PasswordIncorrectException("Password bhul gye!! \n Bnane waqt dhyan kahan tha tumhara");
     }
 }
