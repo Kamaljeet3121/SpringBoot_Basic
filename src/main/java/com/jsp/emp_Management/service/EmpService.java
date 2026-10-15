@@ -34,20 +34,19 @@ public class EmpService {
 
         return objectMapper.convertValue(dbEmp,EmpResDto.class);
 
-
         }
 
-    public Employee updateEmp(Employee employee) {
+    public EmpResDto updateEmp(Employee employee) {
         log.info("updateEmp employee {}", employee);
             fetchEmp(employee.getId());
-            return repo.save(employee);
+            return objectMapper.convertValue(repo.save(employee),EmpResDto.class);
     }
 
-    public Employee deleteEmp(long id) {
+    public EmpResDto deleteEmp(long id) {
         log.info("deleteEmp employee {}", id);
         Employee e=fetchEmp(id);
         repo.delete(e);
-        return e;
+        return objectMapper.convertValue(e,EmpResDto.class);
     }
 
     public Employee fetchEmp(long id) {
@@ -57,15 +56,14 @@ public class EmpService {
 
     public List<Employee> fetchAll() {
         log.info("fetchAll employees");
-        System.out.println("Fetched All Employees...");
         return repo.findAll();
     }
 
-    public Employee updateEmpEmail(long id, String email) {
+    public EmpResDto updateEmpEmail(long id, String email) {
         log.info("updateEmpEmail employee for id {}", id);
         Employee e = fetchEmp(id);
         e.setEmail(email);
-        return repo.save(e);
+        return objectMapper.convertValue(repo.save(e), EmpResDto.class);
 
 //        Optional<Employee> e = repo.findById(id);
 //        if(e.isPresent()){
@@ -78,11 +76,12 @@ public class EmpService {
 //            throw new EmployeeNotFound("Employee Not Found");
     }
 
-    public Employee signIn(String email, String password) {
+    public EmpResDto signIn(String email, String password) {
         log.info("signIn employee of email {}", email);
         Employee e = repo.findByEmail(email).orElseThrow(()-> new EmailNotFound("Email Not Found"));
+
         if(e.getPassword().equals(password)){
-            return e;
+            return objectMapper.convertValue(e,EmpResDto.class);
         }else
             throw new PasswordIncorrectException("Password Incorrect");
     }

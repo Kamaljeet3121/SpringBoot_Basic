@@ -17,4 +17,11 @@ public class ResponseStructure<T> {
     public ResponseStructure(){
         this.timeStamp = LocalDateTime.now();
     }
+
+    public ResponseStructure(int statusCode, String message, T data){
+        this.statusCode = statusCode;
+        this.message = message;
+        this.timeStamp = LocalDateTime.now();
+        this.data = data;
+    }
 }
