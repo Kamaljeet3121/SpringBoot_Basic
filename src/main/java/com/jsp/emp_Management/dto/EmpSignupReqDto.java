@@ -5,6 +5,8 @@ import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Data;
+import lombok.ToString;
+
 
 @Data
 public class EmpSignupReqDto {
@@ -18,6 +20,8 @@ public class EmpSignupReqDto {
 
     @Email
     private String email;
+
+    @ToString.Exclude
     private String password;
     private String designation;
     private double salary;

@@ -2,20 +2,20 @@ package com.jsp.emp_Management.service;
 
 import com.jsp.emp_Management.dto.EmpResDto;
 import com.jsp.emp_Management.dto.EmpSignupReqDto;
+import com.jsp.emp_Management.dto.EmpUpdateReqDto;
 import com.jsp.emp_Management.entity.Employee;
+import com.jsp.emp_Management.exception.EmailAlreadyRegistered;
 import com.jsp.emp_Management.exception.EmailNotFound;
 import com.jsp.emp_Management.exception.EmployeeNotFound;
-import com.jsp.emp_Management.exception.PasswordIncorrectException;
+import com.jsp.emp_Management.exception.PasswordIncorrect;
 import com.jsp.emp_Management.repository.EmpRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import tools.jackson.databind.ObjectMapper;
 
 import java.util.List;
-import java.util.Optional;
+
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -26,7 +26,7 @@ public class EmpService {
     public EmpResDto signUp(EmpSignupReqDto empSignupReqDto) {
         log.info("signUp employee {}", empSignupReqDto);
         if(repo.existsByEmail(empSignupReqDto.getEmail()))
-            throw new EmployeeNotFound("Employee with email " + empSignupReqDto.getEmail() + " already exists");
+            throw new EmailAlreadyRegistered("Employee with email " + empSignupReqDto.getEmail() + " already exists");
 
         Employee emp = objectMapper.convertValue(empSignupReqDto,Employee.class);
 
@@ -36,10 +36,11 @@ public class EmpService {
 
         }
 
-    public EmpResDto updateEmp(Employee employee) {
-        log.info("updateEmp employee {}", employee);
-            fetchEmp(employee.getId());
-            return objectMapper.convertValue(repo.save(employee),EmpResDto.class);
+    public EmpResDto updateEmp(EmpUpdateReqDto empUpdateReqDto) {
+        log.info("updateEmp employee {}", empUpdateReqDto);
+            fetchEmp(empUpdateReqDto.getId());
+            Employee e =objectMapper.convertValue(empUpdateReqDto,Employee.class);
+            return objectMapper.convertValue(repo.save(e),EmpResDto.class);
     }
 
     public EmpResDto deleteEmp(long id) {
@@ -83,6 +84,6 @@ public class EmpService {
         if(e.getPassword().equals(password)){
             return objectMapper.convertValue(e,EmpResDto.class);
         }else
-            throw new PasswordIncorrectException("Password Incorrect");
+            throw new PasswordIncorrect("Password Incorrect");
     }
 }

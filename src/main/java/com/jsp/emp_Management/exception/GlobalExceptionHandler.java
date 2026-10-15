@@ -9,7 +9,6 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,45 +17,49 @@ import java.util.Map;
 public class GlobalExceptionHandler {
     @ExceptionHandler(EmployeeNotFound.class)
     public ResponseEntity<ResponseStructure<String>> handleEmployeeNotFound(EmployeeNotFound ex){
-        log.error(ex.getMessage());
-        ex.printStackTrace();
-
-
-
-        ResponseStructure<String> response = new ResponseStructure();
-        response.setStatusCode(HttpStatus.NOT_FOUND.value());
-        response.setMessage("Employee Not Found Exception Occured");
-        response.setData(ex.getMessage());
+        log.error("Employee not found Exception is handled",ex);
+        ResponseStructure<String> response = new ResponseStructure<>(HttpStatus.NOT_FOUND.value(),
+                                                "Employee Not Found Exception Occurred",
+                                                ex.getMessage());
 
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
     }
+
     @ExceptionHandler(EmailNotFound.class)
-    public ResponseEntity<String> handleEmailNotFound(EmailNotFound ex){
+    public ResponseEntity<ResponseStructure<String>> handleEmailNotFound(EmailNotFound ex){
         log.error(ex.getMessage());
-        ex.printStackTrace();
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+
+        ResponseStructure<String> response = new ResponseStructure<>(HttpStatus.NOT_FOUND.value(),
+                                                "Email Not Found Exception Occurred",
+                                                ex.getMessage());
+
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
     }
 
-    @ExceptionHandler(PasswordIncorrectException.class)
-    public ResponseEntity<String> handlePasswordIncorrectException(PasswordIncorrectException ex){
+    @ExceptionHandler(PasswordIncorrect.class)
+    public ResponseEntity<ResponseStructure<String>> handlePasswordIncorrectException(PasswordIncorrect ex){
         log.error(ex.getMessage());
-        ex.printStackTrace();
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(ex.getMessage());
+
+        ResponseStructure<String> response = new ResponseStructure<>(HttpStatus.UNAUTHORIZED.value(),
+                                                "Password Incorrect Exception Occurred",
+                                                ex.getMessage());
+
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
     }
 
     @ExceptionHandler({ArithmeticException.class, NullPointerException.class})
     public ResponseEntity<ResponseStructure<String>> handleArithmeticException(Exception ex){
         log.error(ex.getMessage());
-        ex.printStackTrace();
-        ResponseStructure<String> response = new ResponseStructure();
-        response.setStatusCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
-        response.setMessage("Arithmetic Exception Occured");
-        response.setData(ex.getMessage());
+        ResponseStructure<String> response = new ResponseStructure<>(HttpStatus.INTERNAL_SERVER_ERROR.value(),
+                                                            "Arithmetic Exception Occurred",
+                                                                    ex.getMessage());
+
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ResponseStructure<Map<String,String>>> handleMethodArgumentNotValidException(MethodArgumentNotValidException ex){
+
         log.error(ex.getMessage());
 
         Map<String,String> error = new HashMap<String,String>();
@@ -65,12 +68,23 @@ public class GlobalExceptionHandler {
             error.put(fieldError.getField(), fieldError.getDefaultMessage());
         }
 
-        ex.printStackTrace();
-        ResponseStructure<Map<String,String>> response = new ResponseStructure<Map<String,String>>();
-        response.setStatusCode(HttpStatus.BAD_REQUEST.value());
-        response.setMessage("Validation Failed for 1 or more fields");
-        response.setData(error);
+        ResponseStructure<Map<String,String>> response = new ResponseStructure<>(HttpStatus.BAD_REQUEST.value(),
+                                                                "Validation Failed for 1 or more fields",
+                                                                error);
+
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
+    }
+
+    @ExceptionHandler(EmailAlreadyRegistered.class)
+    public ResponseEntity<ResponseStructure<String>> handleEmailAlreadyRegistered(EmailAlreadyRegistered ex){
+        log.error(ex.getMessage());
+
+        ResponseStructure<String> response = new ResponseStructure<>(HttpStatus.CONFLICT.value(),
+                                                        "Employee Already Registered, Please Login.",
+                                                        ex.getMessage());
+
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(response);
+
     }
 
 }
