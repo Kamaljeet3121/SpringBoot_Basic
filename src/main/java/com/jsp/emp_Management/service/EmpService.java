@@ -16,7 +16,7 @@ import tools.jackson.databind.ObjectMapper;
 
 import java.util.List;
 
-@Slf4j
+
 @Service
 @RequiredArgsConstructor
 public class EmpService {
@@ -24,7 +24,6 @@ public class EmpService {
     private final ObjectMapper objectMapper;
 
     public EmpResDto signUp(EmpSignupReqDto empSignupReqDto) {
-        log.info("signUp employee {}", empSignupReqDto);
         if(repo.existsByEmail(empSignupReqDto.getEmail()))
             throw new EmailAlreadyRegistered("Employee with email " + empSignupReqDto.getEmail() + " already exists");
 
@@ -37,31 +36,26 @@ public class EmpService {
         }
 
     public EmpResDto updateEmp(EmpUpdateReqDto empUpdateReqDto) {
-        log.info("updateEmp employee {}", empUpdateReqDto);
             fetchEmp(empUpdateReqDto.getId());
             Employee e =objectMapper.convertValue(empUpdateReqDto,Employee.class);
             return objectMapper.convertValue(repo.save(e),EmpResDto.class);
     }
 
     public EmpResDto deleteEmp(long id) {
-        log.info("deleteEmp employee {}", id);
         Employee e=fetchEmp(id);
         repo.delete(e);
         return objectMapper.convertValue(e,EmpResDto.class);
     }
 
     public Employee fetchEmp(long id) {
-        log.info("fetchEmp employee {}", id);
         return repo.findById(id).orElseThrow(()->new EmployeeNotFound("Employee Not Found in Database"));
     }
 
     public List<Employee> fetchAll() {
-        log.info("fetchAll employees");
         return repo.findAll();
     }
 
     public EmpResDto updateEmpEmail(long id, String email) {
-        log.info("updateEmpEmail employee for id {}", id);
         Employee e = fetchEmp(id);
         e.setEmail(email);
         return objectMapper.convertValue(repo.save(e), EmpResDto.class);
@@ -78,7 +72,6 @@ public class EmpService {
     }
 
     public EmpResDto signIn(String email, String password) {
-        log.info("signIn employee of email {}", email);
         Employee e = repo.findByEmail(email).orElseThrow(()-> new EmailNotFound("Email Not Found"));
 
         if(e.getPassword().equals(password)){

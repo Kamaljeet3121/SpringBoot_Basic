@@ -596,3 +596,366 @@ com.jsp.emp_Management.exception.EmployeeNotFound: Employee Not Found in Databas
 2026-10-16T01:18:06.158+05:30  INFO 7404 --- [emp-Management] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-10-16T01:18:06.160+05:30  INFO 7404 --- [emp-Management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-10-16T01:18:06.163+05:30  INFO 7404 --- [emp-Management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-16T09:23:30.829+05:30  INFO 6648 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : Starting EmpManagementApplication using Java 25.0.1 with PID 6648 (D:\InteliJIDEa\SpringBoot\emp-Management\target\classes started by kamal in D:\InteliJIDEa\SpringBoot\emp-Management)
+2026-10-16T09:23:30.833+05:30  INFO 6648 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-10-16T09:23:30.896+05:30  INFO 6648 --- [emp-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-16T09:23:30.897+05:30  INFO 6648 --- [emp-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-16T09:23:31.659+05:30  INFO 6648 --- [emp-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-16T09:23:31.716+05:30  INFO 6648 --- [emp-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 1 JPA repository interface.
+2026-10-16T09:23:32.670+05:30  INFO 6648 --- [emp-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-16T09:23:32.701+05:30  INFO 6648 --- [emp-Management] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-16T09:23:32.702+05:30  INFO 6648 --- [emp-Management] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-16T09:23:32.783+05:30  INFO 6648 --- [emp-Management] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1885 ms
+2026-10-16T09:23:33.158+05:30  INFO 6648 --- [emp-Management] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-16T09:23:33.295+05:30  INFO 6648 --- [emp-Management] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-16T09:23:33.893+05:30  INFO 6648 --- [emp-Management] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-16T09:23:33.936+05:30  INFO 6648 --- [emp-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-16T09:23:34.202+05:30  INFO 6648 --- [emp-Management] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@51e50c69
+2026-10-16T09:23:34.204+05:30  INFO 6648 --- [emp-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-16T09:23:34.735+05:30  WARN 6648 --- [emp-Management] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-16T09:23:34.785+05:30  INFO 6648 --- [emp-Management] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/springstudentdb]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: springstudentdb/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-16T09:23:36.381+05:30  INFO 6648 --- [emp-Management] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-16T09:23:36.721+05:30  INFO 6648 --- [emp-Management] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-16T09:23:36.910+05:30  INFO 6648 --- [emp-Management] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-16T09:23:37.958+05:30  WARN 6648 --- [emp-Management] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-16T09:23:38.547+05:30  INFO 6648 --- [emp-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-16T09:23:38.553+05:30  INFO 6648 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : Started EmpManagementApplication in 8.272 seconds (process running for 9.343)
+2026-10-16T09:23:51.926+05:30  INFO 6648 --- [emp-Management] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-16T09:23:51.927+05:30  INFO 6648 --- [emp-Management] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-16T09:23:51.929+05:30  INFO 6648 --- [emp-Management] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-16T09:23:51.980+05:30  INFO 6648 --- [emp-Management] [http-nio-8080-exec-1] c.j.e.controller.EmpController           : Fetching all Employees
+2026-10-16T09:23:51.981+05:30  INFO 6648 --- [emp-Management] [http-nio-8080-exec-1] c.jsp.emp_Management.service.EmpService  : fetchAll employees
+2026-10-16T09:24:58.120+05:30  INFO 6648 --- [emp-Management] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-16T09:24:58.126+05:30  INFO 6648 --- [emp-Management] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-16T09:24:58.130+05:30  INFO 6648 --- [emp-Management] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-16T09:24:58.134+05:30  INFO 6648 --- [emp-Management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-16T09:24:58.136+05:30  INFO 6648 --- [emp-Management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-16T09:25:02.083+05:30  INFO 18188 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : Starting EmpManagementApplication using Java 25.0.1 with PID 18188 (D:\InteliJIDEa\SpringBoot\emp-Management\target\classes started by kamal in D:\InteliJIDEa\SpringBoot\emp-Management)
+2026-10-16T09:25:02.087+05:30  INFO 18188 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-10-16T09:25:02.145+05:30  INFO 18188 --- [emp-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-16T09:25:02.145+05:30  INFO 18188 --- [emp-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-16T09:25:02.841+05:30  INFO 18188 --- [emp-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-16T09:25:02.893+05:30  INFO 18188 --- [emp-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interface.
+2026-10-16T09:25:03.471+05:30  INFO 18188 --- [emp-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-16T09:25:03.483+05:30  INFO 18188 --- [emp-Management] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-16T09:25:03.483+05:30  INFO 18188 --- [emp-Management] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-16T09:25:03.517+05:30  INFO 18188 --- [emp-Management] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1372 ms
+2026-10-16T09:25:03.679+05:30  INFO 18188 --- [emp-Management] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-16T09:25:03.722+05:30  INFO 18188 --- [emp-Management] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-16T09:25:04.022+05:30  INFO 18188 --- [emp-Management] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-16T09:25:04.042+05:30  INFO 18188 --- [emp-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-16T09:25:04.273+05:30  INFO 18188 --- [emp-Management] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1eaa44d8
+2026-10-16T09:25:04.275+05:30  INFO 18188 --- [emp-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-16T09:25:04.298+05:30  WARN 18188 --- [emp-Management] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-16T09:25:04.319+05:30  INFO 18188 --- [emp-Management] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/springstudentdb]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: springstudentdb/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-16T09:25:05.207+05:30  INFO 18188 --- [emp-Management] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-16T09:25:05.264+05:30  INFO 18188 --- [emp-Management] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-16T09:25:05.362+05:30  INFO 18188 --- [emp-Management] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-16T09:25:05.764+05:30  WARN 18188 --- [emp-Management] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-16T09:25:06.082+05:30  INFO 18188 --- [emp-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-16T09:25:06.088+05:30  INFO 18188 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : Started EmpManagementApplication in 4.484 seconds (process running for 5.418)
+2026-10-16T09:25:14.343+05:30  INFO 18188 --- [emp-Management] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-16T09:25:14.344+05:30  INFO 18188 --- [emp-Management] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-16T09:25:14.346+05:30  INFO 18188 --- [emp-Management] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-16T09:25:14.423+05:30  INFO 18188 --- [emp-Management] [http-nio-8080-exec-2] c.j.e.controller.EmpController           : Fetching all Employees
+2026-10-16T09:25:14.426+05:30  INFO 18188 --- [emp-Management] [http-nio-8080-exec-2] c.jsp.emp_Management.service.EmpService  : fetchAll employees
+2026-10-16T09:27:23.314+05:30  INFO 18188 --- [emp-Management] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-16T09:27:23.331+05:30  INFO 18188 --- [emp-Management] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-16T09:27:23.338+05:30  INFO 18188 --- [emp-Management] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-16T09:27:23.343+05:30  INFO 18188 --- [emp-Management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-16T09:27:23.347+05:30  INFO 18188 --- [emp-Management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-16T09:28:49.345+05:30  INFO 15156 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : Starting EmpManagementApplication using Java 25.0.1 with PID 15156 (D:\InteliJIDEa\SpringBoot\emp-Management\target\classes started by kamal in D:\InteliJIDEa\SpringBoot\emp-Management)
+2026-10-16T09:28:49.347+05:30  INFO 15156 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-10-16T09:28:49.396+05:30  INFO 15156 --- [emp-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-16T09:28:49.396+05:30  INFO 15156 --- [emp-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-16T09:28:50.164+05:30  INFO 15156 --- [emp-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-16T09:28:50.237+05:30  INFO 15156 --- [emp-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 1 JPA repository interface.
+2026-10-16T09:28:50.946+05:30  INFO 15156 --- [emp-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-16T09:28:50.964+05:30  INFO 15156 --- [emp-Management] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-16T09:28:50.966+05:30  INFO 15156 --- [emp-Management] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-16T09:28:51.012+05:30  INFO 15156 --- [emp-Management] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1615 ms
+2026-10-16T09:28:51.334+05:30  INFO 15156 --- [emp-Management] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-16T09:28:51.418+05:30  INFO 15156 --- [emp-Management] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-16T09:28:52.270+05:30  INFO 15156 --- [emp-Management] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-16T09:28:52.329+05:30  INFO 15156 --- [emp-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-16T09:28:52.616+05:30  INFO 15156 --- [emp-Management] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5a8d7296
+2026-10-16T09:28:52.621+05:30  INFO 15156 --- [emp-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-16T09:28:52.686+05:30  WARN 15156 --- [emp-Management] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-16T09:28:52.732+05:30  INFO 15156 --- [emp-Management] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/springstudentdb]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: springstudentdb/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-16T09:28:54.545+05:30  INFO 15156 --- [emp-Management] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-16T09:28:54.668+05:30  INFO 15156 --- [emp-Management] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-16T09:28:55.301+05:30  INFO 15156 --- [emp-Management] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-16T09:28:56.100+05:30  WARN 15156 --- [emp-Management] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-16T09:28:57.014+05:30  INFO 15156 --- [emp-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-16T09:28:57.024+05:30  INFO 15156 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : Started EmpManagementApplication in 8.106 seconds (process running for 8.905)
+2026-10-16T09:28:59.083+05:30  INFO 15156 --- [emp-Management] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-16T09:28:59.085+05:30  INFO 15156 --- [emp-Management] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-16T09:28:59.088+05:30  INFO 15156 --- [emp-Management] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-16T09:28:59.153+05:30  INFO 15156 --- [emp-Management] [http-nio-8080-exec-1] c.j.e.controller.EmpController           : Fetching all Employees
+2026-10-16T09:28:59.157+05:30  INFO 15156 --- [emp-Management] [http-nio-8080-exec-1] c.jsp.emp_Management.service.EmpService  : fetchAll employees
+2026-10-16T09:37:31.552+05:30  WARN 15156 --- [emp-Management] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m38s819ms972µs800ns).
+2026-10-16T09:41:37.174+05:30  INFO 15156 --- [emp-Management] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-16T09:41:37.182+05:30  INFO 15156 --- [emp-Management] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-16T09:41:37.187+05:30  INFO 15156 --- [emp-Management] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-16T09:41:37.191+05:30  INFO 15156 --- [emp-Management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-16T09:41:37.192+05:30  INFO 15156 --- [emp-Management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-16T09:41:41.360+05:30  INFO 17948 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : Starting EmpManagementApplication using Java 25.0.1 with PID 17948 (D:\InteliJIDEa\SpringBoot\emp-Management\target\classes started by kamal in D:\InteliJIDEa\SpringBoot\emp-Management)
+2026-10-16T09:41:41.363+05:30  INFO 17948 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-10-16T09:41:41.424+05:30  INFO 17948 --- [emp-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-16T09:41:41.424+05:30  INFO 17948 --- [emp-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-16T09:41:42.000+05:30  INFO 17948 --- [emp-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-16T09:41:42.036+05:30  INFO 17948 --- [emp-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interface.
+2026-10-16T09:41:42.520+05:30  INFO 17948 --- [emp-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-16T09:41:42.530+05:30  INFO 17948 --- [emp-Management] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-16T09:41:42.530+05:30  INFO 17948 --- [emp-Management] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-16T09:41:42.561+05:30  INFO 17948 --- [emp-Management] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1136 ms
+2026-10-16T09:41:42.715+05:30  INFO 17948 --- [emp-Management] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-16T09:41:42.771+05:30  INFO 17948 --- [emp-Management] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-16T09:41:43.052+05:30  INFO 17948 --- [emp-Management] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-16T09:41:43.071+05:30  INFO 17948 --- [emp-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-16T09:41:43.201+05:30  INFO 17948 --- [emp-Management] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6819c79f
+2026-10-16T09:41:43.202+05:30  INFO 17948 --- [emp-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-16T09:41:43.223+05:30  WARN 17948 --- [emp-Management] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-16T09:41:43.245+05:30  INFO 17948 --- [emp-Management] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/springstudentdb]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: springstudentdb/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-16T09:41:43.898+05:30  INFO 17948 --- [emp-Management] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-16T09:41:43.950+05:30  INFO 17948 --- [emp-Management] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-16T09:41:44.047+05:30  INFO 17948 --- [emp-Management] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-16T09:41:44.344+05:30  WARN 17948 --- [emp-Management] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-16T09:41:44.643+05:30  INFO 17948 --- [emp-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-16T09:41:44.648+05:30  INFO 17948 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : Started EmpManagementApplication in 3.69 seconds (process running for 4.431)
+2026-10-16T09:42:23.679+05:30  INFO 17948 --- [emp-Management] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-16T09:42:23.679+05:30  INFO 17948 --- [emp-Management] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-16T09:42:23.682+05:30  INFO 17948 --- [emp-Management] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-16T09:42:23.776+05:30  INFO 17948 --- [emp-Management] [http-nio-8080-exec-2] c.jsp.emp_Management.aop.LoggingAspect   : Entering logging method 1signInand Arguments [Lucas@silo18.com, Lucas@143]
+2026-10-16T09:42:23.776+05:30  INFO 17948 --- [emp-Management] [http-nio-8080-exec-2] c.j.e.controller.EmpController           : Fetching Employee with email Lucas@silo18.com and password Lucas@143
+2026-10-16T09:42:23.778+05:30  INFO 17948 --- [emp-Management] [http-nio-8080-exec-2] c.jsp.emp_Management.aop.LoggingAspect   : Entering logging method 1signInand Arguments [Lucas@silo18.com, Lucas@143]
+2026-10-16T09:42:23.778+05:30  INFO 17948 --- [emp-Management] [http-nio-8080-exec-2] c.jsp.emp_Management.service.EmpService  : signIn employee of email Lucas@silo18.com
+2026-10-16T09:42:23.779+05:30  INFO 17948 --- [emp-Management] [http-nio-8080-exec-2] c.jsp.emp_Management.aop.LoggingAspect   : Entering logging method 1findByEmailand Arguments [Lucas@silo18.com]
+2026-10-16T09:44:13.393+05:30  INFO 17948 --- [emp-Management] [http-nio-8080-exec-3] c.jsp.emp_Management.aop.LoggingAspect   : Entering logging method 1fetchEmpand Arguments [20]
+2026-10-16T09:44:13.393+05:30  INFO 17948 --- [emp-Management] [http-nio-8080-exec-3] c.j.e.controller.EmpController           : Fetching Employee with id 20
+2026-10-16T09:44:13.394+05:30  INFO 17948 --- [emp-Management] [http-nio-8080-exec-3] c.jsp.emp_Management.aop.LoggingAspect   : Entering logging method 1fetchEmpand Arguments [20]
+2026-10-16T09:44:13.394+05:30  INFO 17948 --- [emp-Management] [http-nio-8080-exec-3] c.jsp.emp_Management.service.EmpService  : fetchEmp employee 20
+2026-10-16T09:44:13.399+05:30  INFO 17948 --- [emp-Management] [http-nio-8080-exec-3] c.jsp.emp_Management.aop.LoggingAspect   : Entering logging method 1findByIdand Arguments [20]
+2026-10-16T09:46:53.196+05:30  INFO 17948 --- [emp-Management] [http-nio-8080-exec-5] c.jsp.emp_Management.aop.LoggingAspect   : Entering logging method 1signUpand Arguments [EmpSignupReqDto(name=Suraj Singh, age=38, email=Suraj@gmail.com, designation=UnEmployed, salary=32000.0)]
+2026-10-16T09:46:53.197+05:30  INFO 17948 --- [emp-Management] [http-nio-8080-exec-5] c.j.e.controller.EmpController           : signUp Employee : EmpSignupReqDto(name=Suraj Singh, age=38, email=Suraj@gmail.com, designation=UnEmployed, salary=32000.0)
+2026-10-16T09:46:53.199+05:30  INFO 17948 --- [emp-Management] [http-nio-8080-exec-5] c.jsp.emp_Management.aop.LoggingAspect   : Entering logging method 1signUpand Arguments [EmpSignupReqDto(name=Suraj Singh, age=38, email=Suraj@gmail.com, designation=UnEmployed, salary=32000.0)]
+2026-10-16T09:46:53.199+05:30  INFO 17948 --- [emp-Management] [http-nio-8080-exec-5] c.jsp.emp_Management.service.EmpService  : signUp employee EmpSignupReqDto(name=Suraj Singh, age=38, email=Suraj@gmail.com, designation=UnEmployed, salary=32000.0)
+2026-10-16T09:46:53.200+05:30  INFO 17948 --- [emp-Management] [http-nio-8080-exec-5] c.jsp.emp_Management.aop.LoggingAspect   : Entering logging method 1existsByEmailand Arguments [Suraj@gmail.com]
+2026-10-16T09:46:53.236+05:30  INFO 17948 --- [emp-Management] [http-nio-8080-exec-5] c.jsp.emp_Management.aop.LoggingAspect   : Entering logging method 1saveand Arguments [Employee(id=0, name=Suraj Singh, age=38, email=Suraj@gmail.com, password=suraj@143, designation=UnEmployed, salary=32000.0)]
+2026-10-16T09:52:05.064+05:30  INFO 17948 --- [emp-Management] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2026-10-16T09:52:05.076+05:30  INFO 17948 --- [emp-Management] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-16T09:52:05.089+05:30  INFO 17948 --- [emp-Management] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-16T09:52:05.097+05:30  INFO 17948 --- [emp-Management] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-16T09:52:05.105+05:30  INFO 17948 --- [emp-Management] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-16T09:52:05.109+05:30  INFO 17948 --- [emp-Management] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-16T09:52:05.313+05:30  INFO 17948 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : Starting EmpManagementApplication using Java 25.0.1 with PID 17948 (D:\InteliJIDEa\SpringBoot\emp-Management\target\classes started by kamal in D:\InteliJIDEa\SpringBoot\emp-Management)
+2026-10-16T09:52:05.314+05:30  INFO 17948 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-10-16T09:52:05.680+05:30  INFO 17948 --- [emp-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-16T09:52:05.700+05:30  INFO 17948 --- [emp-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interface.
+2026-10-16T09:52:05.939+05:30  INFO 17948 --- [emp-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-16T09:52:05.942+05:30  INFO 17948 --- [emp-Management] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-16T09:52:05.943+05:30  INFO 17948 --- [emp-Management] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-16T09:52:05.995+05:30  INFO 17948 --- [emp-Management] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 677 ms
+2026-10-16T09:52:06.114+05:30  INFO 17948 --- [emp-Management] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-16T09:52:06.164+05:30  INFO 17948 --- [emp-Management] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-16T09:52:06.166+05:30  INFO 17948 --- [emp-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-10-16T09:52:06.279+05:30  INFO 17948 --- [emp-Management] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@d89153
+2026-10-16T09:52:06.281+05:30  INFO 17948 --- [emp-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-10-16T09:52:06.298+05:30  WARN 17948 --- [emp-Management] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-16T09:52:06.319+05:30  INFO 17948 --- [emp-Management] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/springstudentdb]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: springstudentdb/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-16T09:52:06.446+05:30  INFO 17948 --- [emp-Management] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-16T09:52:06.495+05:30  INFO 17948 --- [emp-Management] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-16T09:52:06.661+05:30  WARN 17948 --- [emp-Management] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-16T09:52:07.375+05:30  INFO 17948 --- [emp-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-16T09:52:07.382+05:30  INFO 17948 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : Started EmpManagementApplication in 2.124 seconds (process running for 627.164)
+2026-10-16T09:52:07.386+05:30  INFO 17948 --- [emp-Management] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-16T09:52:09.091+05:30  INFO 17948 --- [emp-Management] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+2026-10-16T09:52:09.093+05:30  INFO 17948 --- [emp-Management] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-16T09:52:09.103+05:30  INFO 17948 --- [emp-Management] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-16T09:52:09.106+05:30  INFO 17948 --- [emp-Management] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-16T09:52:09.108+05:30  INFO 17948 --- [emp-Management] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-10-16T09:52:09.111+05:30  INFO 17948 --- [emp-Management] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-10-16T09:52:09.235+05:30  INFO 17948 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : Starting EmpManagementApplication using Java 25.0.1 with PID 17948 (D:\InteliJIDEa\SpringBoot\emp-Management\target\classes started by kamal in D:\InteliJIDEa\SpringBoot\emp-Management)
+2026-10-16T09:52:09.236+05:30  INFO 17948 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-10-16T09:52:09.426+05:30  INFO 17948 --- [emp-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-16T09:52:09.437+05:30  INFO 17948 --- [emp-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interface.
+2026-10-16T09:52:09.555+05:30  INFO 17948 --- [emp-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-16T09:52:09.556+05:30  INFO 17948 --- [emp-Management] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-16T09:52:09.557+05:30  INFO 17948 --- [emp-Management] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-16T09:52:09.583+05:30  INFO 17948 --- [emp-Management] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 346 ms
+2026-10-16T09:52:09.658+05:30  INFO 17948 --- [emp-Management] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-16T09:52:09.682+05:30  INFO 17948 --- [emp-Management] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-16T09:52:09.683+05:30  INFO 17948 --- [emp-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-10-16T09:52:09.766+05:30  INFO 17948 --- [emp-Management] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@6868bf30
+2026-10-16T09:52:09.767+05:30  INFO 17948 --- [emp-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-10-16T09:52:09.787+05:30  WARN 17948 --- [emp-Management] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-16T09:52:09.805+05:30  INFO 17948 --- [emp-Management] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/springstudentdb]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: springstudentdb/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-16T09:52:09.927+05:30  INFO 17948 --- [emp-Management] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-16T09:52:09.975+05:30  INFO 17948 --- [emp-Management] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-16T09:55:54.953+05:30  WARN 17948 --- [emp-Management] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-16T09:55:55.569+05:30  INFO 17948 --- [emp-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-16T09:55:55.572+05:30  INFO 17948 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : Started EmpManagementApplication in 226.365 seconds (process running for 855.354)
+2026-10-16T09:55:55.573+05:30  INFO 17948 --- [emp-Management] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-16T09:56:24.113+05:30  WARN 17948 --- [emp-Management] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=4m14s245ms745µs300ns).
+2026-10-16T10:03:21.673+05:30  INFO 17948 --- [emp-Management] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-10-16T10:03:21.674+05:30  INFO 17948 --- [emp-Management] [Thread-9] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-16T10:03:21.681+05:30  INFO 17948 --- [emp-Management] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-16T10:03:21.684+05:30  INFO 17948 --- [emp-Management] [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-16T10:03:21.685+05:30  INFO 17948 --- [emp-Management] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-10-16T10:03:21.687+05:30  INFO 17948 --- [emp-Management] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-10-16T10:03:21.768+05:30  INFO 17948 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : Starting EmpManagementApplication using Java 25.0.1 with PID 17948 (D:\InteliJIDEa\SpringBoot\emp-Management\target\classes started by kamal in D:\InteliJIDEa\SpringBoot\emp-Management)
+2026-10-16T10:03:21.769+05:30  INFO 17948 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-10-16T10:03:21.915+05:30  INFO 17948 --- [emp-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-16T10:03:21.920+05:30  INFO 17948 --- [emp-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 1 JPA repository interface.
+2026-10-16T10:03:21.993+05:30  INFO 17948 --- [emp-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-16T10:03:21.995+05:30  INFO 17948 --- [emp-Management] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-16T10:03:21.995+05:30  INFO 17948 --- [emp-Management] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-16T10:03:22.013+05:30  INFO 17948 --- [emp-Management] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 241 ms
+2026-10-16T10:03:22.048+05:30  INFO 17948 --- [emp-Management] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-16T10:03:22.069+05:30  INFO 17948 --- [emp-Management] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-16T10:03:22.070+05:30  INFO 17948 --- [emp-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-10-16T10:03:22.116+05:30  INFO 17948 --- [emp-Management] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@2137ebfb
+2026-10-16T10:03:22.117+05:30  INFO 17948 --- [emp-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-10-16T10:03:22.124+05:30  WARN 17948 --- [emp-Management] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-16T10:03:22.131+05:30  INFO 17948 --- [emp-Management] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/springstudentdb]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: springstudentdb/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-16T10:03:22.188+05:30  INFO 17948 --- [emp-Management] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-16T10:03:22.216+05:30  INFO 17948 --- [emp-Management] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-16T10:03:22.328+05:30  WARN 17948 --- [emp-Management] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-16T10:03:22.427+05:30  INFO 17948 --- [emp-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-16T10:03:22.429+05:30  INFO 17948 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : Started EmpManagementApplication in 0.688 seconds (process running for 1302.212)
+2026-10-16T10:03:22.430+05:30  INFO 17948 --- [emp-Management] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-16T10:32:47.196+05:30  WARN 17948 --- [emp-Management] [HikariPool-4:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=26m54s972ms725µs200ns).
+2026-10-16T10:33:58.219+05:30  INFO 17948 --- [emp-Management] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-16T10:33:58.227+05:30  INFO 17948 --- [emp-Management] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-16T10:33:58.229+05:30  INFO 17948 --- [emp-Management] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-16T10:33:58.231+05:30  INFO 17948 --- [emp-Management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-10-16T10:33:58.233+05:30  INFO 17948 --- [emp-Management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-10-16T10:34:02.544+05:30  INFO 16292 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : Starting EmpManagementApplication using Java 25.0.1 with PID 16292 (D:\InteliJIDEa\SpringBoot\emp-Management\target\classes started by kamal in D:\InteliJIDEa\SpringBoot\emp-Management)
+2026-10-16T10:34:02.547+05:30  INFO 16292 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-10-16T10:34:02.593+05:30  INFO 16292 --- [emp-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-16T10:34:02.593+05:30  INFO 16292 --- [emp-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-16T10:34:03.185+05:30  INFO 16292 --- [emp-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-16T10:34:03.220+05:30  INFO 16292 --- [emp-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 1 JPA repository interface.
+2026-10-16T10:34:03.689+05:30  INFO 16292 --- [emp-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-16T10:34:03.699+05:30  INFO 16292 --- [emp-Management] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-16T10:34:03.699+05:30  INFO 16292 --- [emp-Management] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-16T10:34:03.732+05:30  INFO 16292 --- [emp-Management] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1137 ms
+2026-10-16T10:34:03.882+05:30  INFO 16292 --- [emp-Management] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-16T10:34:03.930+05:30  INFO 16292 --- [emp-Management] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-16T10:34:04.234+05:30  INFO 16292 --- [emp-Management] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-16T10:34:04.254+05:30  INFO 16292 --- [emp-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-16T10:34:04.375+05:30  INFO 16292 --- [emp-Management] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6344133e
+2026-10-16T10:34:04.376+05:30  INFO 16292 --- [emp-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-16T10:34:04.399+05:30  WARN 16292 --- [emp-Management] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-16T10:34:04.419+05:30  INFO 16292 --- [emp-Management] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/springstudentdb]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: springstudentdb/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-16T10:34:05.101+05:30  INFO 16292 --- [emp-Management] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-16T10:34:05.155+05:30  INFO 16292 --- [emp-Management] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-16T10:34:05.253+05:30  INFO 16292 --- [emp-Management] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-16T10:34:05.542+05:30  WARN 16292 --- [emp-Management] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-16T10:34:05.875+05:30  INFO 16292 --- [emp-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-16T10:34:05.880+05:30  INFO 16292 --- [emp-Management] [restartedMain] c.j.e.EmpManagementApplication           : Started EmpManagementApplication in 3.741 seconds (process running for 4.686)
+2026-10-16T10:34:24.529+05:30  INFO 16292 --- [emp-Management] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-16T10:34:24.529+05:30  INFO 16292 --- [emp-Management] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-16T10:34:24.533+05:30  INFO 16292 --- [emp-Management] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-10-16T10:34:24.627+05:30  INFO 16292 --- [emp-Management] [http-nio-8080-exec-1] c.jsp.emp_Management.aop.LoggingAspect   : Entering logging method 2fetchEmp
+2026-10-16T10:34:24.631+05:30  INFO 16292 --- [emp-Management] [http-nio-8080-exec-1] c.jsp.emp_Management.aop.LoggingAspect   : Entering logging method 2fetchEmp
+2026-10-16T10:34:24.639+05:30  INFO 16292 --- [emp-Management] [http-nio-8080-exec-1] c.jsp.emp_Management.aop.LoggingAspect   : Entering logging method 2findById
+2026-10-16T10:34:24.783+05:30  INFO 16292 --- [emp-Management] [http-nio-8080-exec-1] c.jsp.emp_Management.aop.LoggingAspect   : Exiting logging method 2findById
+2026-10-16T10:34:24.785+05:30  INFO 16292 --- [emp-Management] [http-nio-8080-exec-1] c.jsp.emp_Management.aop.LoggingAspect   : Exiting logging method 2fetchEmp
+2026-10-16T10:34:24.983+05:30  INFO 16292 --- [emp-Management] [http-nio-8080-exec-1] c.jsp.emp_Management.aop.LoggingAspect   : Exiting logging method 2fetchEmp
+2026-10-16T10:35:34.602+05:30  INFO 16292 --- [emp-Management] [http-nio-8080-exec-3] c.jsp.emp_Management.aop.LoggingAspect   : Entering logging method 2signIn
+2026-10-16T10:35:34.602+05:30  INFO 16292 --- [emp-Management] [http-nio-8080-exec-3] c.jsp.emp_Management.aop.LoggingAspect   : Entering logging method 2signIn
+2026-10-16T10:35:34.603+05:30  INFO 16292 --- [emp-Management] [http-nio-8080-exec-3] c.jsp.emp_Management.aop.LoggingAspect   : Entering logging method 2findByEmail
+2026-10-16T10:35:35.402+05:30  INFO 16292 --- [emp-Management] [http-nio-8080-exec-3] c.jsp.emp_Management.aop.LoggingAspect   : Exiting logging method 2findByEmail
+2026-10-16T10:35:35.406+05:30  INFO 16292 --- [emp-Management] [http-nio-8080-exec-3] c.jsp.emp_Management.aop.LoggingAspect   : Entering logging method 2handleEmailNotFound
+2026-10-16T10:35:35.406+05:30 ERROR 16292 --- [emp-Management] [http-nio-8080-exec-3] c.j.e.exception.GlobalExceptionHandler   : Email Not Found
+2026-10-16T10:35:35.407+05:30  INFO 16292 --- [emp-Management] [http-nio-8080-exec-3] c.jsp.emp_Management.aop.LoggingAspect   : Exiting logging method 2handleEmailNotFound
+2026-10-16T10:35:35.412+05:30  WARN 16292 --- [emp-Management] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: java.lang.RuntimeException: com.jsp.emp_Management.exception.EmailNotFound: Email Not Found]

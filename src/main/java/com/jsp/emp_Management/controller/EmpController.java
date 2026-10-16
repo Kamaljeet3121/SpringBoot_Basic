@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import tools.jackson.databind.ObjectMapper;
 
 import java.util.List;
-@Slf4j
+
 @RestController
 @RequestMapping("/api/v1/emp")
 @RequiredArgsConstructor
@@ -25,7 +25,7 @@ public class EmpController {
 
     @PostMapping("/signUp")
     public ResponseEntity<ResponseStructure<EmpResDto>> signUp(@RequestBody @Valid EmpSignupReqDto empSignupReqDto) {
-        log.info("signUp Employee : {}", empSignupReqDto);
+//        log.info("signUp Employee : {}", empSignupReqDto);
 
         EmpResDto empResDto = empService.signUp(empSignupReqDto);
         ResponseStructure<EmpResDto> resStructure = new ResponseStructure<>(HttpStatus.CREATED.value(),
@@ -38,7 +38,7 @@ public class EmpController {
     @PutMapping("/update")
     public ResponseEntity<ResponseStructure<EmpResDto>> updateEmp(@RequestBody @Valid EmpUpdateReqDto empUpdateReqDto) {
 
-        log.info("Update Employee Request for {}", empUpdateReqDto.getId());
+//        log.info("Update Employee Request for {}", empUpdateReqDto.getId());
 
         ResponseStructure<EmpResDto> resStructure = new ResponseStructure<>(HttpStatus.ACCEPTED.value(),
                                                         "Employee Updated Successfully",
@@ -50,7 +50,7 @@ public class EmpController {
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<ResponseStructure<EmpResDto>> deleteEmp(@PathVariable long id) {
 
-        log.info("Deleteing Employee with id {}",id);
+//        log.info("Deleteing Employee with id {}",id);
 
         ResponseStructure<EmpResDto> resStructure = new ResponseStructure<>(HttpStatus.ACCEPTED.value(),
                                                         "Employee Deleted Successfully",
@@ -61,7 +61,7 @@ public class EmpController {
 
     @GetMapping("/fetch/{id}")
     public ResponseEntity<ResponseStructure<EmpResDto>> fetchEmp(@PathVariable long id) {
-        log.info("Fetching Employee with id {}", id);
+//        log.info("Fetching Employee with id {}", id);
 
         ResponseStructure<EmpResDto> resStructure = new ResponseStructure<>(HttpStatus.FOUND.value(),
                                                         "Employee Found:",objectMapper.
@@ -74,7 +74,7 @@ public class EmpController {
 
     @GetMapping("/fetchAll")
     public ResponseEntity<ResponseStructure<List<Employee>>> fetchAllEmp() {
-        log.info("Fetching all Employees");
+//        log.info("Fetching all Employees");
 
         ResponseStructure<List<Employee>> resStructure = new ResponseStructure<>(HttpStatus.OK.value(),
                                                         "All Employees Fetched Successfully",
@@ -85,7 +85,7 @@ public class EmpController {
 
     @PatchMapping("/updateEmail/{id}")
     public ResponseEntity<ResponseStructure<EmpResDto>> updateEmpEmail(@PathVariable long id,@RequestHeader String email) {
-        log.info("Updating Employee with id {}", id);
+//        log.info("Updating Employee with id {}", id);
 
         ResponseStructure<EmpResDto> resStructure = new ResponseStructure<>(HttpStatus.ACCEPTED.value(),
                                                         "Employee Email Updated Successfully",
@@ -96,7 +96,7 @@ public class EmpController {
 
     @PostMapping("/signIn")
     public ResponseEntity<ResponseStructure<EmpResDto>> signIn(@RequestHeader String email, @RequestHeader String password) {
-        log.info("Fetching Employee with email {} and password {}", email, password);
+//        log.info("Fetching Employee with email {} and password {}", email, password);
 
         ResponseStructure<EmpResDto> resStructure = new ResponseStructure<>(HttpStatus.FOUND.value(),
                                                         "Employee Signed In Successfully",
